@@ -371,6 +371,9 @@ const elements = {
   sessionModeBadge: $("#sessionModeBadge"),
   sessionCategoryBadge: $("#sessionCategoryBadge"),
   sessionHintBadge: $("#sessionHintBadge"),
+  mobileScore: $("#mobileScore"),
+  mobileStreak: $("#mobileStreak"),
+  mobileAccuracy: $("#mobileAccuracy"),
   questionLabel: $("#questionLabel"),
   questionCount: $("#questionCount"),
   progressStrip: $("#progressStrip"),
@@ -713,9 +716,12 @@ function updateScoreboard() {
 
 function updateStats() {
   elements.scoreRail.textContent = `${state.score} XP`;
+  elements.mobileScore.textContent = state.score;
   elements.streakBadge.textContent = state.streak;
+  elements.mobileStreak.textContent = state.streak;
   elements.currentStreak.textContent = state.streak;
   elements.accuracy.textContent = `${getAccuracy()}%`;
+  elements.mobileAccuracy.textContent = `${getAccuracy()}%`;
   elements.precisionMeter.style.width = `${getAccuracy()}%`;
 
   const level = getLevel(state.score);
