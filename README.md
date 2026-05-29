@@ -10,6 +10,9 @@ Abra `index.html` diretamente no navegador ou sirva a pasta com qualquer servido
 
 - 30 perguntas locais sobre regras, fundamentos, quadra, pontuacao e historia geral do basquete.
 - Timer por dificuldade: facil 15s, medio 22s e dificil 30s.
+- Menu inicial com escolha de modo individual ou grupo local por codigo.
+- Categorias de conteudo: misto, regras, arbitragem, fundamentos, quadra/pontuacao e relogio/estrategia.
+- Salas em modo casual com dicas ou torneio com dicas bloqueadas.
 - XP com bonus por tempo restante e sequencia.
 - Resultado final e historico local via `localStorage`.
 - Layout responsivo com arte HQ gerada para o projeto.
