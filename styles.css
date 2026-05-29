@@ -292,10 +292,10 @@ svg path {
 .quiz-board > .board-art {
   position: absolute;
   z-index: 0;
-  top: 258px;
-  right: -28px;
-  width: min(42%, 350px);
-  opacity: 0.95;
+  top: 304px;
+  right: -56px;
+  width: min(34%, 285px);
+  opacity: 0.72;
   filter: drop-shadow(0 12px 0 rgba(20, 19, 27, 0.13));
   transform: rotate(2deg);
   pointer-events: none;
@@ -417,13 +417,13 @@ svg path {
 }
 
 .quiz-board h2 {
-  max-width: 610px;
+  max-width: 570px;
   min-height: 178px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(2rem, 3.7vw, 3.55rem);
+  font-size: clamp(2rem, 3.35vw, 3.15rem);
   font-weight: 950;
-  line-height: 1.08;
+  line-height: 1.1;
   text-wrap: balance;
   text-shadow: 3px 4px 0 rgba(36, 28, 86, 0.4);
 }
@@ -468,6 +468,7 @@ svg path {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px 26px;
+  max-width: 720px;
 }
 
 .answer-button {
@@ -914,10 +915,10 @@ svg path {
   }
 
   .quiz-board > .board-art {
-    width: min(34%, 230px);
-    right: 0;
-    top: 230px;
-    opacity: 0.45;
+    width: min(28%, 190px);
+    right: 4px;
+    top: 292px;
+    opacity: 0.22;
   }
 
   .comic-logo {
