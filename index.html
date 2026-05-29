@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Basquete Quiz HQ: um quiz interativo sobre regras, fundamentos e curiosidades do basquete."
+    />
+    <title>Basquete Quiz HQ</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Basquete Quiz">
+      <aside class="brand-rail" aria-label="Navegacao e nivel">
+        <div class="comic-logo" aria-label="Basquete Quiz">
+          <span>Basquete</span>
+          <strong>Quiz</strong>
+        </div>
+
+        <section class="xp-panel" aria-label="Seu progresso">
+          <div class="xp-total">
+            <span class="star-mark" aria-hidden="true"></span>
+            <span id="scoreRail">0 XP</span>
+          </div>
+          <div class="mini-meter" aria-hidden="true">
+            <span id="levelMeter"></span>
+          </div>
+          <div class="level-row">
+            <span id="levelLabel">Nivel 1</span>
+            <span id="nextLevelLabel">120 XP para o proximo nivel</span>
+          </div>
+        </section>
+
+        <nav class="menu-panel" aria-label="Menu do quiz">
+          <button class="menu-item is-active" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 10.7 12 3l9 7.7v8.8a1 1 0 0 1-1 1h-5.4v-5.8H9.4v5.8H4a1 1 0 0 1-1-1z" />
+            </svg>
+            Quiz
+          </button>
+          <button class="menu-item" type="button" data-action="show-results">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 4h10v3h3v4c0 2.6-1.7 4.8-4.1 5.5A5.1 5.1 0 0 1 13 18.8V21h3v2H8v-2h3v-2.2a5.1 5.1 0 0 1-2.9-2.3A5.9 5.9 0 0 1 4 11V7h3zm10 5v4.9c.8-.6 1.3-1.6 1.3-2.9V9zM5.7 9v2c0 1.3.5 2.3 1.3 2.9V9z" />
+            </svg>
+            Pontuacao
+          </button>
+          <button class="menu-item" type="button" data-action="restart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5a7 7 0 1 1-6.3 4H3l3.8-4.2L10.7 9H8a5 5 0 1 0 4-2z" />
+            </svg>
+            Reiniciar
+          </button>
+        </nav>
+
+        <img class="sticker-pack" src="assets/basket-stickers.png" alt="" />
+      </aside>
+
+      <section class="quiz-board" aria-live="polite">
+        <img class="board-art" src="assets/basket-stickers.png" alt="" />
+
+        <header class="quiz-topbar">
+          <button class="circle-button" type="button" data-action="previous" aria-label="Pergunta anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m14.5 5-7 7 7 7" />
+            </svg>
+          </button>
+          <h1>Basquete Quiz</h1>
+          <div class="top-actions">
+            <button class="circle-button icon-warm" type="button" data-action="hint" aria-label="Mostrar dica">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 18h6M10 22h4M8.2 14.5a6 6 0 1 1 7.6 0c-.9.7-1.3 1.6-1.3 2.5h-5c0-.9-.4-1.8-1.3-2.5z" />
+              </svg>
+            </button>
+            <button class="circle-button" type="button" data-action="restart" aria-label="Reiniciar quiz">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="question-meta">
+          <span id="questionLabel">01 Pergunta</span>
+          <strong id="questionCount">1 de 30</strong>
+        </div>
+
+        <div class="progress-strip" id="progressStrip" aria-label="Progresso do quiz"></div>
+
+        <div class="question-stage">
+          <div>
+            <span class="difficulty-chip" id="difficultyChip">Facil</span>
+            <h2 id="questionText">Carregando pergunta...</h2>
+            <p id="hintText" class="hint-text" hidden></p>
+          </div>
+          <div class="timer-badge" id="timerBadge" aria-live="assertive">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 2h6v2H9zM12 5a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm1 4h-2v5l4 2 1-1.7-3-1.5z" />
+            </svg>
+            <span id="timer">00:15</span>
+          </div>
+        </div>
+
+        <p class="answer-kicker">Escolha sua resposta</p>
+        <div class="answers-grid" id="answersGrid"></div>
+
+        <p class="explanation" id="explanation" hidden></p>
+
+        <footer class="quiz-footer">
+          <button class="nav-button ghost" type="button" data-action="previous">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m14.5 5-7 7 7 7" />
+            </svg>
+            Anterior
+          </button>
+
+          <div class="streak-badge" aria-label="Sequencia atual">
+            <span class="streak-star" aria-hidden="true"></span>
+            <strong id="streakBadge">0</strong>
+          </div>
+
+          <button class="nav-button next" type="button" data-action="next">
+            <span id="nextButtonText">Proxima</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9.5 5 7 7-7 7" />
+            </svg>
+          </button>
+        </footer>
+      </section>
+
+      <aside class="score-rail" aria-label="Pontuacao">
+        <section class="scoreboard">
+          <h2>Pontuacao</h2>
+          <ol id="scoreList" class="score-list"></ol>
+        </section>
+
+        <section class="stat-card streak-card">
+          <span class="card-label">Sequencia</span>
+          <div class="big-stat">
+            <span class="flame" aria-hidden="true"></span>
+            <strong id="currentStreak">0</strong>
+          </div>
+          <p>perguntas seguidas</p>
+        </section>
+
+        <section class="stat-card">
+          <span class="card-label">Precisao</span>
+          <div class="big-stat">
+            <span class="target-icon" aria-hidden="true"></span>
+            <strong id="accuracy">0%</strong>
+          </div>
+          <div class="precision-meter" aria-hidden="true">
+            <span id="precisionMeter"></span>
+          </div>
+          <p>respostas corretas</p>
+        </section>
+      </aside>
+    </main>
+
+    <dialog class="result-modal" id="resultModal" aria-labelledby="resultTitle">
+      <div class="modal-burst" aria-hidden="true"></div>
+      <h2 id="resultTitle">Placar final</h2>
+      <p id="resultSummary"></p>
+      <div class="result-grid">
+        <div>
+          <span>XP</span>
+          <strong id="finalScore">0</strong>
+        </div>
+        <div>
+          <span>Acertos</span>
+          <strong id="finalCorrect">0/30</strong>
+        </div>
+        <div>
+          <span>Precisao</span>
+          <strong id="finalAccuracy">0%</strong>
+        </div>
+        <div>
+          <span>Maior sequencia</span>
+          <strong id="finalBestStreak">0</strong>
+        </div>
+      </div>
+      <ol id="historyList" class="history-list"></ol>
+      <div class="modal-actions">
+        <button class="nav-button ghost dark" type="button" data-action="close-results">Voltar</button>
+        <button class="nav-button next" type="button" data-action="restart">Jogar de novo</button>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
