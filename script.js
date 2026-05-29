@@ -1,7 +1,7 @@
 const DIFFICULTY = {
-  easy: { label: "Facil", timeLimit: 15, baseXp: 80 },
-  medium: { label: "Medio", timeLimit: 22, baseXp: 120 },
-  hard: { label: "Dificil", timeLimit: 30, baseXp: 170 },
+  easy: { label: "Fácil", timeLimit: 15, baseXp: 80 },
+  medium: { label: "Médio", timeLimit: 22, baseXp: 120 },
+  hard: { label: "Difícil", timeLimit: 30, baseXp: 170 },
 };
 
 const CATEGORIES = {
@@ -13,27 +13,27 @@ const CATEGORIES = {
   rules: {
     label: "Regras do basquete",
     shortLabel: "Regras",
-    description: "Pontuacao, violacoes, posse e situacoes comuns de partida.",
+    description: "Pontuação, violações, posse e situações comuns de partida.",
   },
   refereeing: {
     label: "Arbitragem",
     shortLabel: "Arbitragem",
-    description: "Faltas, penalidades, relogio, reposicoes e decisoes de jogo.",
+    description: "Faltas, penalidades, relógio, reposições e decisões de jogo.",
   },
   fundamentals: {
     label: "Fundamentos",
     shortLabel: "Fundamentos",
-    description: "Drible, passe, rebote, defesa, bloqueios e acoes tecnicas.",
+    description: "Drible, passe, rebote, defesa, bloqueios e ações técnicas.",
   },
   court: {
-    label: "Quadra e pontuacao",
+    label: "Quadra e pontuação",
     shortLabel: "Quadra",
-    description: "Linhas, areas, medidas, valores de cesta e espacos da quadra.",
+    description: "Linhas, áreas, medidas, valores de cesta e espaços da quadra.",
   },
   strategy: {
-    label: "Relogio e estrategia",
-    shortLabel: "Estrategia",
-    description: "Tempo de ataque, defesa por zona, corta-luz e escolhas taticas.",
+    label: "Relógio e estratégia",
+    shortLabel: "Estratégia",
+    description: "Tempo de ataque, defesa por zona, corta-luz e escolhas táticas.",
   },
 };
 
@@ -45,7 +45,7 @@ const questionBank = [
     question: "Quantos pontos vale uma cesta feita de dentro do arco?",
     options: ["1 ponto", "2 pontos", "3 pontos", "4 pontos"],
     answerIndex: 1,
-    hint: "Pense no arremesso comum, feito antes da linha de tres pontos.",
+    hint: "Pense no arremesso comum, feito antes da linha de três pontos.",
     explanation: "Arremessos convertidos de dentro do arco valem 2 pontos.",
   },
   {
@@ -55,27 +55,27 @@ const questionBank = [
     question: "Quantos jogadores de um time ficam em quadra ao mesmo tempo?",
     options: ["4 jogadores", "5 jogadores", "6 jogadores", "7 jogadores"],
     answerIndex: 1,
-    hint: "Conte apenas quem esta jogando naquele momento, sem incluir o banco.",
+    hint: "Conte apenas quem está jogando naquele momento, sem incluir o banco.",
     explanation: "Cada equipe joga com 5 atletas em quadra.",
   },
   {
     id: 3,
     difficulty: "easy",
     categories: ["fundamentals"],
-    question: "Qual fundamento e usado para se deslocar com a bola?",
+    question: "Qual fundamento é usado para se deslocar com a bola?",
     options: ["Drible", "Bloqueio", "Rebote", "Lance livre"],
     answerIndex: 0,
-    hint: "E o fundamento em que a bola precisa tocar o chao repetidamente.",
-    explanation: "O drible permite avancar quicando a bola no chao.",
+    hint: "É o fundamento em que a bola precisa tocar o chão repetidamente.",
+    explanation: "O drible permite avançar quicando a bola no chão.",
   },
   {
     id: 4,
     difficulty: "easy",
     categories: ["rules", "court"],
-    question: "Qual linha marca arremessos que valem tres pontos?",
-    options: ["Linha lateral", "Linha de lance livre", "Arco de tres pontos", "Linha central"],
+    question: "Qual linha marca arremessos que valem três pontos?",
+    options: ["Linha lateral", "Linha de lance livre", "Arco de três pontos", "Linha central"],
     answerIndex: 2,
-    hint: "Ela forma um arco grande em volta da area proxima a cesta.",
+    hint: "Ela forma um arco grande em volta da área próxima à cesta.",
     explanation: "Cestas feitas de fora do arco valem 3 pontos.",
   },
   {
@@ -83,19 +83,19 @@ const questionBank = [
     difficulty: "easy",
     categories: ["rules", "refereeing"],
     question: "O que acontece depois de uma falta em um arremesso convertido?",
-    options: ["Bola ao alto", "Um lance livre extra", "Dois tempos tecnicos", "Fim do ataque"],
+    options: ["Bola ao alto", "Um lance livre extra", "Dois tempos técnicos", "Fim do ataque"],
     answerIndex: 1,
-    hint: "A cesta ja valeu, entao a punicao adiciona uma cobranca parada.",
+    hint: "A cesta já valeu, então a punição adiciona uma cobrança parada.",
     explanation: "A cesta conta e o jogador ganha um lance livre adicional.",
   },
   {
     id: 6,
     difficulty: "easy",
     categories: ["fundamentals"],
-    question: "Qual e o objetivo principal do rebote?",
-    options: ["Recuperar a bola apos erro", "Cobrar lateral", "Pedir tempo", "Trocar posse automaticamente"],
+    question: "Qual é o objetivo principal do rebote?",
+    options: ["Recuperar a bola após um erro", "Cobrar lateral", "Pedir tempo", "Trocar posse automaticamente"],
     answerIndex: 0,
-    hint: "Ele acontece logo depois de um arremesso que nao cai.",
+    hint: "Ele acontece logo depois de um arremesso que não cai.",
     explanation: "O rebote recupera a posse depois de um arremesso errado.",
   },
   {
@@ -105,7 +105,7 @@ const questionBank = [
     question: "Uma cesta de lance livre vale quantos pontos?",
     options: ["1 ponto", "2 pontos", "3 pontos", "5 pontos"],
     answerIndex: 0,
-    hint: "E a cobranca parada mais simples do placar.",
+    hint: "É a cobrança parada mais simples do placar.",
     explanation: "Cada lance livre convertido vale 1 ponto.",
   },
   {
@@ -113,7 +113,7 @@ const questionBank = [
     difficulty: "easy",
     categories: ["court"],
     question: "Qual parte da quadra divide defesa e ataque?",
-    options: ["Garrafao", "Linha central", "Tabela", "Circulo do lance livre"],
+    options: ["Garrafão", "Linha central", "Tabela", "Círculo do lance livre"],
     answerIndex: 1,
     hint: "Ela corta a quadra em duas metades iguais.",
     explanation: "A linha central separa as duas metades da quadra.",
@@ -123,30 +123,32 @@ const questionBank = [
     difficulty: "easy",
     categories: ["rules", "refereeing"],
     question: "Quando a bola sai pela lateral, como ela volta ao jogo?",
-    options: ["Com lance livre", "Com bola ao alto", "Com reposicao lateral", "Com tiro de meta"],
+    options: ["Com lance livre", "Com bola ao alto", "Com reposição lateral", "Com tiro de meta"],
     answerIndex: 2,
     hint: "A bola volta de fora da quadra, perto do ponto onde saiu.",
-    explanation: "A equipe repoe a bola de fora da quadra no ponto indicado.",
+    explanation: "A equipe repõe a bola de fora da quadra no ponto indicado.",
   },
   {
     id: 10,
     difficulty: "easy",
     categories: ["fundamentals"],
-    question: "Qual acao defensiva tenta impedir um arremesso perto da cesta?",
-    options: ["Toco", "Assistencia", "Enterrada", "Corta-luz"],
+    question: "Qual ação defensiva tenta impedir um arremesso perto da cesta?",
+    options: ["Toco", "Assistência", "Enterrada", "Corta-luz"],
     answerIndex: 0,
-    hint: "A defesa mira a bola no momento em que ela esta subindo para o aro.",
+    hint: "A defesa mira a bola no momento em que ela está subindo para o aro.",
     explanation: "O toco bloqueia ou desvia a tentativa de arremesso.",
   },
   {
     id: 11,
     difficulty: "medium",
     categories: ["rules", "refereeing", "strategy"],
-    question: "Qual e o tempo de posse para finalizar um ataque no basquete profissional?",
+    question: "Qual é o tempo de posse para finalizar um ataque no basquete profissional?",
     options: ["24 segundos", "8 segundos", "14 segundos", "30 segundos"],
     answerIndex: 0,
-    hint: "Esse e o relogio que obriga o ataque a arremessar rapidamente.",
-    explanation: "O ataque precisa tentar um arremesso valido antes de 24 segundos.",
+    multiplier: 2,
+    multiplierReason: "Relógio de posse: pergunta 2X.",
+    hint: "É o relógio que obriga o ataque a arremessar rapidamente.",
+    explanation: "O ataque precisa tentar um arremesso válido antes de 24 segundos.",
   },
   {
     id: 12,
@@ -162,189 +164,212 @@ const questionBank = [
     id: 13,
     difficulty: "medium",
     categories: ["rules", "refereeing"],
-    question: "O que caracteriza a infracao de andar?",
-    options: ["Quicar com as duas maos", "Mover os pes sem driblar corretamente", "Tocar a bola na tabela", "Pular para disputar rebote"],
+    question: "O que caracteriza a infração de andar?",
+    options: ["Quicar com as duas mãos", "Mover os pés sem driblar corretamente", "Tocar a bola na tabela", "Pular para disputar rebote"],
     answerIndex: 1,
-    hint: "Observe os pes: sem drible legal, eles nao podem passear livremente.",
-    explanation: "Andar ocorre quando o jogador desloca os pes alem do permitido sem drible.",
+    hint: "Observe os pés: sem drible legal, eles não podem se deslocar livremente.",
+    explanation: "Andar ocorre quando o jogador desloca os pés além do permitido sem drible.",
   },
   {
     id: 14,
     difficulty: "medium",
     categories: ["fundamentals", "strategy"],
-    question: "O que e uma assistencia?",
+    question: "O que é uma assistência?",
     options: ["Passe que leva direto a uma cesta", "Falta de ataque", "Rebote defensivo", "Bloqueio ilegal"],
     answerIndex: 0,
-    hint: "Nao e qualquer passe: ele precisa criar uma cesta logo em seguida.",
-    explanation: "Assistencia e o passe que cria uma cesta imediatamente.",
+    hint: "Não é qualquer passe: ele precisa criar uma cesta logo em seguida.",
+    explanation: "Assistência é o passe que cria uma cesta imediatamente.",
   },
   {
     id: 15,
     difficulty: "medium",
     categories: ["court"],
-    question: "Qual area perto da cesta tambem e chamada de garrafao?",
-    options: ["Area restritiva", "Zona morta", "Linha lateral", "Arco central"],
+    question: "Qual área perto da cesta também é chamada de garrafão?",
+    options: ["Área restritiva", "Zona morta", "Linha lateral", "Arco central"],
     answerIndex: 0,
-    hint: "E a area pintada abaixo do aro, onde varias regras especiais aparecem.",
-    explanation: "O garrafao e a area restritiva pintada proxima ao aro.",
+    multiplier: 2,
+    multiplierReason: "Domínio de quadra: pergunta 2X.",
+    hint: "É a área pintada abaixo do aro, onde várias regras especiais aparecem.",
+    explanation: "O garrafão é a área restritiva pintada próxima ao aro.",
   },
   {
     id: 16,
     difficulty: "medium",
     categories: ["rules", "refereeing", "fundamentals"],
     question: "O que acontece quando um jogador para o drible e volta a quicar?",
-    options: ["Falta tecnica", "Dois dribles", "Toco legal", "Reposicao alternada"],
+    options: ["Falta técnica", "Dois dribles", "Toco legal", "Reposição alternada"],
     answerIndex: 1,
-    hint: "Depois que o drible acaba, ele nao pode nascer de novo na mesma posse individual.",
-    explanation: "Parar e reiniciar o drible configura a infracao de dois dribles.",
+    hint: "Depois que o drible acaba, ele não pode recomeçar na mesma posse individual.",
+    explanation: "Parar e reiniciar o drible configura a infração de dois dribles.",
   },
   {
     id: 17,
     difficulty: "medium",
     categories: ["fundamentals", "strategy"],
-    question: "Em uma defesa por zona, cada defensor protege principalmente o que?",
-    options: ["Uma area da quadra", "A bola do arbitro", "A propria cesta apenas", "Um jogador fixo o tempo todo"],
+    question: "Em uma defesa por zona, cada defensor protege principalmente o quê?",
+    options: ["Uma área da quadra", "A bola do árbitro", "A própria cesta apenas", "Um jogador fixo o tempo todo"],
     answerIndex: 0,
-    hint: "A palavra-chave e espaco, nao marcacao individual permanente.",
-    explanation: "Na defesa por zona, a prioridade e proteger espacos definidos.",
+    hint: "A palavra-chave é espaço, não marcação individual permanente.",
+    explanation: "Na defesa por zona, a prioridade é proteger espaços definidos.",
   },
   {
     id: 18,
     difficulty: "medium",
     categories: ["rules", "refereeing"],
-    question: "Qual e o reinicio usado no comeco da partida em muitas regras?",
-    options: ["Reposicao lateral", "Bola ao alto", "Lance livre", "Cobranca no fundo"],
+    question: "Qual reinício é usado no começo da partida em muitas regras?",
+    options: ["Reposição lateral", "Bola ao alto", "Lance livre", "Cobrança no fundo"],
     answerIndex: 1,
-    hint: "Dois jogadores disputam a bola lancada para cima no circulo central.",
-    explanation: "A bola ao alto inicia a disputa de posse no circulo central.",
+    hint: "Dois jogadores disputam a bola lançada para cima no círculo central.",
+    explanation: "A bola ao alto inicia a disputa de posse no círculo central.",
   },
   {
     id: 19,
     difficulty: "medium",
     categories: ["rules", "refereeing", "strategy"],
-    question: "O que significa estouro do relogio de posse?",
-    options: ["Fim do quarto", "Ataque sem arremesso valido no prazo", "Troca obrigatoria", "Pedido automatico de tempo"],
+    question: "O que significa estouro do relógio de posse?",
+    options: ["Fim do quarto", "Ataque sem arremesso válido no prazo", "Troca obrigatória", "Pedido automático de tempo"],
     answerIndex: 1,
-    hint: "Se o ataque nao entrega um arremesso valido a tempo, a posse muda.",
-    explanation: "Se o ataque nao arremessa no prazo, perde a posse.",
+    hint: "Se o ataque não entrega um arremesso válido a tempo, a posse muda.",
+    explanation: "Se o ataque não arremessa no prazo, perde a posse.",
   },
   {
     id: 20,
     difficulty: "medium",
     categories: ["fundamentals", "strategy"],
-    question: "Qual acao ofensiva usa o corpo parado para liberar um companheiro?",
+    question: "Qual ação ofensiva usa o corpo parado para liberar um companheiro?",
     options: ["Corta-luz", "Toco", "Rebote", "Lance livre"],
     answerIndex: 0,
     hint: "O jogador vira uma barreira legal para abrir caminho ao colega.",
-    explanation: "O corta-luz cria espaco bloqueando legalmente o caminho do defensor.",
+    explanation: "O corta-luz cria espaço bloqueando legalmente o caminho do defensor.",
   },
   {
     id: 21,
     difficulty: "hard",
     categories: ["rules", "refereeing"],
-    question: "Na regra FIBA, uma equipe entra em penalidade coletiva apos quantas faltas no quarto?",
+    question: "Na regra FIBA, uma equipe entra em penalidade coletiva após quantas faltas no quarto?",
     options: ["3 faltas", "4 faltas", "5 faltas", "6 faltas"],
     answerIndex: 1,
-    hint: "Depois desse limite, as faltas seguintes colocam o adversario no bonus.",
-    explanation: "A partir da 5a falta sofrida no quarto, o adversario cobra lances livres; isso ocorre depois de 4 faltas coletivas.",
+    multiplier: 2,
+    multiplierReason: "Arbitragem avançada: pergunta 2X.",
+    hint: "Depois desse limite, as faltas seguintes colocam o adversário no bônus.",
+    explanation: "Depois da 4ª falta coletiva no quarto, as faltas seguintes levam o adversário aos lances livres.",
   },
   {
     id: 22,
     difficulty: "hard",
     categories: ["rules", "refereeing", "strategy"],
-    question: "Quando o relogio de posse costuma ser resetado para 14 segundos?",
-    options: ["Apos rebote ofensivo", "Apos qualquer passe", "Apos bola ao alto no inicio", "Apos pedido de tempo da defesa"],
+    question: "Quando o relógio de posse costuma ser resetado para 14 segundos?",
+    options: ["Após rebote ofensivo", "Após qualquer passe", "Após bola ao alto no início", "Após pedido de tempo da defesa"],
     answerIndex: 0,
-    hint: "A equipe continua no ataque, entao o relogio nao volta completo.",
+    hint: "A equipe continua no ataque, então o relógio não volta completo.",
     explanation: "Em muitas regras atuais, o rebote ofensivo reseta a posse para 14 segundos.",
   },
   {
     id: 23,
     difficulty: "hard",
     categories: ["rules", "refereeing"],
-    question: "Qual e a consequencia comum de uma falta antidesportiva?",
-    options: ["Somente lateral", "Dois pontos automaticos", "Lances livres e posse", "Volta o relogio ao inicio"],
+    question: "Qual é a consequência comum de uma falta antidesportiva?",
+    options: ["Somente lateral", "Dois pontos automáticos", "Lances livres e posse", "Voltar o relógio ao início"],
     answerIndex: 2,
-    hint: "A punicao combina cobrancas e manutencao da posse.",
+    multiplier: 2,
+    multiplierReason: "Decisão crítica: pergunta 2X.",
+    hint: "A punição combina cobranças e manutenção da posse.",
     explanation: "Ela normalmente gera lances livres e posse de bola para a equipe prejudicada.",
   },
   {
     id: 24,
     difficulty: "hard",
     categories: ["rules", "refereeing", "strategy"],
-    question: "O que e uma violacao de volta de quadra?",
-    options: ["Chutar a bola", "Retornar a bola para a defesa apos controle no ataque", "Tocar no aro", "Trocar de marcador"],
+    question: "O que é uma violação de volta de quadra?",
+    options: ["Chutar a bola", "Retornar a bola para a defesa após controlar no ataque", "Tocar no aro", "Trocar de marcador"],
     answerIndex: 1,
-    hint: "Depois que o ataque e estabelecido, a linha central vira uma fronteira.",
-    explanation: "Depois de estabelecer posse no ataque, a equipe nao pode voltar a bola para a meia quadra defensiva.",
+    hint: "Depois que o ataque é estabelecido, a linha central vira uma fronteira.",
+    explanation: "Depois de estabelecer posse no ataque, a equipe não pode voltar a bola para a meia quadra defensiva.",
   },
   {
     id: 25,
     difficulty: "hard",
     categories: ["court"],
-    question: "Em regras internacionais, qual e a distancia aproximada do arco de tres pontos no topo?",
+    question: "Em regras internacionais, qual é a distância aproximada do arco de três pontos no topo?",
     options: ["5,80 m", "6,75 m", "7,90 m", "9,15 m"],
     answerIndex: 1,
+    multiplier: 2,
+    multiplierReason: "Medida oficial: pergunta 2X.",
     hint: "A medida internacional fica um pouco abaixo dos 7 metros.",
-    explanation: "No padrao FIBA, o arco fica a cerca de 6,75 metros no topo.",
+    explanation: "No padrão FIBA, o arco fica a cerca de 6,75 metros no topo.",
   },
   {
     id: 26,
     difficulty: "hard",
     categories: ["rules", "refereeing", "strategy"],
-    question: "Qual infracao ocorre quando um jogador permanece tempo demais no garrafao ofensivo?",
-    options: ["3 segundos ofensivos", "8 segundos", "24 segundos", "Interferencia"],
+    question: "Qual infração ocorre quando um jogador permanece tempo demais no garrafão ofensivo?",
+    options: ["3 segundos ofensivos", "8 segundos", "24 segundos", "Interferência"],
     answerIndex: 0,
-    hint: "O garrafao ofensivo nao pode virar estacionamento.",
-    explanation: "A regra dos 3 segundos limita a permanencia no garrafao ofensivo.",
+    hint: "O garrafão ofensivo não pode virar estacionamento.",
+    explanation: "A regra dos 3 segundos limita a permanência no garrafão ofensivo.",
   },
   {
     id: 27,
     difficulty: "hard",
     categories: ["rules", "refereeing"],
-    question: "O que e interferencia na bola perto do aro?",
-    options: ["Tocar a bola em trajetoria proibida", "Passar sem olhar", "Quicar alto demais", "Pisar fora da quadra"],
+    question: "O que é interferência na bola perto do aro?",
+    options: ["Tocar a bola em trajetória protegida", "Passar sem olhar", "Quicar alto demais", "Pisar fora da quadra"],
     answerIndex: 0,
-    hint: "A regra protege a bola quando ela esta sobre ou muito perto do aro.",
-    explanation: "Interferencia envolve tocar a bola quando ela esta sobre o aro ou em condicao protegida pela regra.",
+    hint: "A regra protege a bola quando ela está sobre ou muito perto do aro.",
+    explanation: "Interferência envolve tocar a bola quando ela está sobre o aro ou em condição protegida pela regra.",
   },
   {
     id: 28,
     difficulty: "hard",
     categories: ["rules", "refereeing", "court"],
-    question: "Em um arremesso de tres pontos com falta e cesta convertida, o maximo da jogada pode chegar a quantos pontos?",
+    question: "Em um arremesso de três pontos com falta e cesta convertida, a jogada pode chegar a quantos pontos?",
     options: ["3 pontos", "4 pontos", "5 pontos", "6 pontos"],
     answerIndex: 1,
-    hint: "Some a cesta de fora com uma cobranca extra.",
+    multiplier: 2,
+    multiplierReason: "Jogada rara: pergunta 2X.",
+    hint: "Some a cesta de fora com uma cobrança extra.",
     explanation: "A cesta de 3 conta e o lance livre extra pode transformar a jogada em 4 pontos.",
   },
   {
     id: 29,
     difficulty: "hard",
     categories: ["rules"],
-    question: "Qual organizacao define as regras internacionais mais usadas fora da liga norte-americana?",
+    question: "Qual organização define as regras internacionais mais usadas fora da liga norte-americana?",
     options: ["FIBA", "FIFA", "IAAF", "ITF"],
     answerIndex: 0,
-    hint: "E a federacao internacional do proprio basquete.",
-    explanation: "A FIBA e a federacao internacional responsavel pelas regras globais do basquete.",
+    hint: "É a federação internacional do próprio basquete.",
+    explanation: "A FIBA é a federação internacional responsável pelas regras globais do basquete.",
   },
   {
     id: 30,
     difficulty: "hard",
     categories: ["court"],
-    question: "Qual medida da quadra adulta FIBA e mais proxima do comprimento oficial?",
+    question: "Qual medida da quadra adulta FIBA é mais próxima do comprimento oficial?",
     options: ["22 metros", "24 metros", "28 metros", "32 metros"],
     answerIndex: 2,
+    multiplier: 2,
+    multiplierReason: "Conhecimento de quadra: pergunta 2X.",
     hint: "A quadra adulta internacional fica um pouco abaixo de 30 metros.",
     explanation: "A quadra FIBA adulta mede aproximadamente 28 metros de comprimento.",
   },
 ].map((item) => ({
   ...item,
+  baseTimeLimit: DIFFICULTY[item.difficulty].timeLimit,
   timeLimit: DIFFICULTY[item.difficulty].timeLimit,
+  multiplier: item.multiplier || 1,
+  multiplierReason: item.multiplierReason || "",
 }));
 
 const storageKey = "basquete-quiz-hq-history";
 const roomStoragePrefix = "basquete-quiz-room-";
+const settingsKey = "basquete-quiz-settings";
+const DEFAULT_SETTINGS = {
+  volume: 0.7,
+  musicEnabled: false,
+  individualExtra: 0,
+  groupExtra: 15,
+};
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
@@ -354,6 +379,7 @@ const elements = {
   roomScreen: $("#roomScreen"),
   modeModal: $("#modeModal"),
   categoryModal: $("#categoryModal"),
+  settingsModal: $("#settingsModal"),
   categoryGrid: $("#categoryGrid"),
   roomCategoryGrid: $("#roomCategoryGrid"),
   createRoomPanel: $("#createRoomPanel"),
@@ -364,6 +390,15 @@ const elements = {
   startRoomButton: $("#startRoomButton"),
   joinRoomCode: $("#joinRoomCode"),
   joinFeedback: $("#joinFeedback"),
+  volumeControl: $("#volumeControl"),
+  volumeValue: $("#volumeValue"),
+  musicToggle: $("#musicToggle"),
+  individualExtraControl: $("#individualExtraControl"),
+  individualExtraValue: $("#individualExtraValue"),
+  groupExtraField: $("#groupExtraField"),
+  groupExtraControl: $("#groupExtraControl"),
+  groupExtraValue: $("#groupExtraValue"),
+  groupExtraNote: $("#groupExtraNote"),
   scoreRail: $("#scoreRail"),
   levelMeter: $("#levelMeter"),
   levelLabel: $("#levelLabel"),
@@ -401,6 +436,13 @@ const elements = {
 };
 
 let questions = getQuestionSet("mixed");
+let settings = loadSettings();
+let audioContext = null;
+let masterGain = null;
+let musicTimer = null;
+let musicStep = 0;
+
+const musicPattern = [196, 246.94, 293.66, 246.94, 220, 261.63, 329.63, 261.63];
 
 const setupState = {
   selectedCategory: "mixed",
@@ -422,6 +464,7 @@ const state = {
   hintsShown: new Set(),
   finished: false,
   timerId: null,
+  lastTickSecond: null,
   session: {
     mode: "individual",
     category: "mixed",
@@ -429,12 +472,172 @@ const state = {
     hintsEnabled: true,
     roomCode: null,
     roomRole: null,
+    groupExtra: DEFAULT_SETTINGS.groupExtra,
   },
 };
 
-function getQuestionSet(categoryId) {
+function clampNumber(value, min, max, fallback = min) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.min(max, Math.max(min, parsed));
+}
+
+function loadSettings() {
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(settingsKey) || "{}");
+    return {
+      volume: clampNumber(saved.volume, 0, 1, DEFAULT_SETTINGS.volume),
+      musicEnabled: Boolean(saved.musicEnabled),
+      individualExtra: clampNumber(saved.individualExtra, 0, 20, DEFAULT_SETTINGS.individualExtra),
+      groupExtra: clampNumber(saved.groupExtra, 10, 20, DEFAULT_SETTINGS.groupExtra),
+    };
+  } catch {
+    return { ...DEFAULT_SETTINGS };
+  }
+}
+
+function saveSettings() {
+  window.localStorage.setItem(settingsKey, JSON.stringify(settings));
+}
+
+function ensureAudio() {
+  const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextConstructor) return null;
+
+  if (!audioContext) {
+    audioContext = new AudioContextConstructor();
+    masterGain = audioContext.createGain();
+    masterGain.gain.value = settings.volume;
+    masterGain.connect(audioContext.destination);
+  }
+
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
+
+  return audioContext;
+}
+
+function applyAudioVolume() {
+  if (!audioContext || !masterGain) return;
+  masterGain.gain.setTargetAtTime(settings.volume, audioContext.currentTime, 0.015);
+}
+
+function playTone(frequency, duration, type = "sine", gain = 0.08, delay = 0) {
+  if (settings.volume <= 0) return;
+  const context = ensureAudio();
+  if (!context || !masterGain) return;
+
+  const oscillator = context.createOscillator();
+  const toneGain = context.createGain();
+  const start = context.currentTime + delay;
+  const end = start + duration;
+
+  oscillator.frequency.setValueAtTime(frequency, start);
+  oscillator.type = type;
+  toneGain.gain.setValueAtTime(0.0001, start);
+  toneGain.gain.linearRampToValueAtTime(gain, start + 0.012);
+  toneGain.gain.exponentialRampToValueAtTime(0.001, end);
+
+  oscillator.connect(toneGain);
+  toneGain.connect(masterGain);
+  oscillator.start(start);
+  oscillator.stop(end + 0.04);
+  oscillator.addEventListener("ended", () => {
+    oscillator.disconnect();
+    toneGain.disconnect();
+  });
+}
+
+function playSound(kind) {
+  if (settings.volume <= 0) return;
+
+  if (kind === "click") {
+    playTone(620, 0.045, "square", 0.025);
+  }
+
+  if (kind === "correct") {
+    playTone(523.25, 0.09, "triangle", 0.06);
+    playTone(659.25, 0.1, "triangle", 0.055, 0.07);
+    playTone(783.99, 0.12, "triangle", 0.05, 0.14);
+  }
+
+  if (kind === "wrong") {
+    playTone(246.94, 0.12, "sawtooth", 0.06);
+    playTone(164.81, 0.18, "sawtooth", 0.05, 0.08);
+  }
+
+  if (kind === "timeout") {
+    playTone(130.81, 0.26, "sawtooth", 0.065);
+    playTone(98, 0.28, "square", 0.045, 0.12);
+  }
+
+  if (kind === "tick") {
+    playTone(880, 0.055, "square", 0.025);
+  }
+
+  if (kind === "bonus") {
+    playTone(783.99, 0.09, "triangle", 0.045);
+    playTone(1046.5, 0.11, "triangle", 0.04, 0.08);
+    playTone(1318.51, 0.14, "triangle", 0.035, 0.16);
+  }
+}
+
+function startMusic() {
+  if (!settings.musicEnabled || musicTimer) return;
+  ensureAudio();
+  musicTimer = window.setInterval(() => {
+    const note = musicPattern[musicStep % musicPattern.length];
+    playTone(note, 0.18, "triangle", 0.018);
+    if (musicStep % 4 === 0) {
+      playTone(note / 2, 0.26, "sine", 0.012);
+    }
+    musicStep += 1;
+  }, 620);
+}
+
+function stopMusic() {
+  if (musicTimer) {
+    window.clearInterval(musicTimer);
+    musicTimer = null;
+  }
+}
+
+function syncMusic() {
+  if (settings.musicEnabled) {
+    startMusic();
+  } else {
+    stopMusic();
+  }
+}
+
+function unlockAudioFromGesture() {
+  ensureAudio();
+  syncMusic();
+}
+
+function getTimeBonusForSession(sessionOptions) {
+  if (sessionOptions.mode === "group") {
+    return clampNumber(sessionOptions.groupExtra ?? settings.groupExtra, 10, 20, DEFAULT_SETTINGS.groupExtra);
+  }
+
+  return clampNumber(settings.individualExtra, 0, 20, DEFAULT_SETTINGS.individualExtra);
+}
+
+function applyTiming(question, sessionOptions) {
+  const bonus = getTimeBonusForSession(sessionOptions);
+  return {
+    ...question,
+    timeLimit: question.baseTimeLimit + bonus,
+    sessionTimeBonus: bonus,
+  };
+}
+
+function getQuestionSet(categoryId, sessionOptions = null) {
   const selected = categoryId === "mixed" ? questionBank : questionBank.filter((question) => question.categories.includes(categoryId));
-  return selected.length ? selected.map((question) => ({ ...question })) : questionBank.map((question) => ({ ...question }));
+  const source = selected.length ? selected : questionBank;
+  const copy = source.map((question) => ({ ...question }));
+  return sessionOptions ? copy.map((question) => applyTiming(question, sessionOptions)) : copy;
 }
 
 function formatTime(totalSeconds) {
@@ -470,7 +673,12 @@ function calculateXp(question, remainingSeconds, newStreak) {
   const config = DIFFICULTY[question.difficulty];
   const timeBonus = Math.round((remainingSeconds / question.timeLimit) * 30);
   const streakBonus = Math.min(newStreak * 8, 48);
-  return config.baseXp + timeBonus + streakBonus;
+  const clutchBonus = remainingSeconds > 0 && remainingSeconds <= 3 ? 25 : 0;
+  return Math.round((config.baseXp + timeBonus + streakBonus) * question.multiplier + clutchBonus);
+}
+
+function getAnswerLetter(index) {
+  return String.fromCharCode(65 + index);
 }
 
 function closeDialog(dialog) {
@@ -482,6 +690,13 @@ function closeSetupDialogs() {
   closeDialog(elements.categoryModal);
 }
 
+function closeSettings(shouldResume = true) {
+  closeDialog(elements.settingsModal);
+  if (shouldResume && state.phase === "quiz" && !state.finished) {
+    startTimer();
+  }
+}
+
 function showScreen(screen) {
   elements.startScreen.classList.toggle("is-hidden", screen !== "start");
   elements.roomScreen.classList.toggle("is-hidden", screen !== "room");
@@ -489,30 +704,60 @@ function showScreen(screen) {
 }
 
 function openModeModal() {
+  closeSettings(false);
   closeDialog(elements.categoryModal);
   showScreen("start");
   if (!elements.modeModal.open) elements.modeModal.showModal();
 }
 
 function openCategoryModal() {
+  closeSettings(false);
   closeDialog(elements.modeModal);
   renderCategoryControls();
   if (!elements.categoryModal.open) elements.categoryModal.showModal();
 }
 
+function openSettings() {
+  closeSetupDialogs();
+  closeDialog(elements.resultModal);
+  stopTimer();
+  renderSettings();
+  if (!elements.settingsModal.open) elements.settingsModal.showModal();
+}
+
 function showRoomScreen() {
+  closeSettings(false);
   closeSetupDialogs();
   stopTimer();
   state.phase = "setup";
   setupState.roomTab = "create";
   setupState.pendingRoom = null;
-  elements.joinFeedback.textContent = "Aguardando codigo.";
+  elements.joinFeedback.textContent = "Aguardando código.";
   elements.joinFeedback.classList.remove("is-error", "is-ok");
   elements.roomCodeBox.hidden = true;
   elements.startRoomButton.disabled = true;
   renderRoomTabs();
   renderCategoryControls();
   showScreen("room");
+}
+
+function renderSettings() {
+  if (!elements.settingsModal) return;
+
+  elements.volumeControl.value = Math.round(settings.volume * 100);
+  elements.volumeValue.textContent = `${Math.round(settings.volume * 100)}%`;
+  elements.musicToggle.checked = settings.musicEnabled;
+  elements.individualExtraControl.value = settings.individualExtra;
+  elements.individualExtraValue.textContent = `+${settings.individualExtra}s`;
+  elements.groupExtraControl.value = settings.groupExtra;
+  elements.groupExtraValue.textContent = `+${settings.groupExtra}s`;
+
+  const guestInGroup = state.phase === "quiz" && state.session.mode === "group" && state.session.roomRole === "guest";
+  elements.groupExtraControl.disabled = guestInGroup;
+  elements.groupExtraField.classList.toggle("is-disabled", guestInGroup);
+  elements.groupExtraNote.textContent = guestInGroup
+    ? "Somente quem criou a sala pode ajustar este tempo."
+    : "Quem cria a sala define o bônus de tempo do grupo.";
 }
 
 function renderCategoryControls() {
@@ -601,12 +846,15 @@ function createRoom() {
     code: generateRoomCode(),
     category: setupState.roomCategory,
     playStyle: setupState.playStyle,
+    groupExtra: settings.groupExtra,
     createdAt: Date.now(),
   };
   setupState.pendingRoom = room;
   saveRoom(room);
   elements.roomCodeLabel.textContent = room.code;
-  elements.roomCreatedMeta.textContent = `${CATEGORIES[room.category].label} - ${room.playStyle === "tournament" ? "modo torneio" : "modo casual"}`;
+  elements.roomCreatedMeta.textContent = `${CATEGORIES[room.category].label} - ${
+    room.playStyle === "tournament" ? "modo torneio" : "modo casual"
+  } - +${room.groupExtra}s em grupo`;
   elements.roomCodeBox.hidden = false;
   elements.startRoomButton.disabled = false;
 }
@@ -619,13 +867,16 @@ function joinRoom() {
   const code = normalizeRoomCode(elements.joinRoomCode.value);
   const room = readRoom(code);
   if (!room) {
-    elements.joinFeedback.textContent = "Room nao encontrada neste navegador. Confira o codigo do criador.";
+    elements.joinFeedback.textContent = "Sala não encontrada neste navegador. Confira o código do criador.";
     elements.joinFeedback.classList.add("is-error");
     elements.joinFeedback.classList.remove("is-ok");
+    playSound("wrong");
     return;
   }
 
-  elements.joinFeedback.textContent = `Room pronta: ${CATEGORIES[room.category].label}, ${room.playStyle === "tournament" ? "torneio" : "casual"}.`;
+  elements.joinFeedback.textContent = `Sala pronta: ${CATEGORIES[room.category].label}, ${
+    room.playStyle === "tournament" ? "torneio" : "casual"
+  }, +${room.groupExtra ?? settings.groupExtra}s.`;
   elements.joinFeedback.classList.add("is-ok");
   elements.joinFeedback.classList.remove("is-error");
   startQuiz({
@@ -634,6 +885,7 @@ function joinRoom() {
     playStyle: room.playStyle,
     roomCode: room.code,
     roomRole: "guest",
+    groupExtra: room.groupExtra ?? settings.groupExtra,
   });
 }
 
@@ -645,14 +897,27 @@ function startRoom() {
     playStyle: setupState.pendingRoom.playStyle,
     roomCode: setupState.pendingRoom.code,
     roomRole: "host",
+    groupExtra: setupState.pendingRoom.groupExtra,
   });
 }
 
 function startQuiz(sessionOptions) {
+  closeSettings(false);
   closeSetupDialogs();
-  closeResults();
+  closeResults(false);
   stopTimer();
-  questions = getQuestionSet(sessionOptions.category);
+
+  const session = {
+    mode: sessionOptions.mode,
+    category: sessionOptions.category,
+    playStyle: sessionOptions.playStyle || "casual",
+    hintsEnabled: sessionOptions.playStyle !== "tournament",
+    roomCode: sessionOptions.roomCode || null,
+    roomRole: sessionOptions.roomRole || null,
+    groupExtra: clampNumber(sessionOptions.groupExtra ?? settings.groupExtra, 10, 20, DEFAULT_SETTINGS.groupExtra),
+  };
+
+  questions = getQuestionSet(session.category, session);
   state.phase = "quiz";
   state.currentIndex = 0;
   state.score = 0;
@@ -663,14 +928,8 @@ function startQuiz(sessionOptions) {
   state.answered = new Map();
   state.hintsShown = new Set();
   state.remainingById = new Map(questions.map((question) => [question.id, question.timeLimit]));
-  state.session = {
-    mode: sessionOptions.mode,
-    category: sessionOptions.category,
-    playStyle: sessionOptions.playStyle || "casual",
-    hintsEnabled: sessionOptions.playStyle !== "tournament",
-    roomCode: sessionOptions.roomCode || null,
-    roomRole: sessionOptions.roomRole || null,
-  };
+  state.lastTickSecond = null;
+  state.session = session;
   showScreen("quiz");
   renderSessionStrip();
   renderQuestion();
@@ -680,9 +939,11 @@ function renderSessionStrip() {
   const category = CATEGORIES[state.session.category] || CATEGORIES.mixed;
   const isGroup = state.session.mode === "group";
   const roleLabel = state.session.roomRole === "host" ? "criador" : state.session.roomRole === "guest" ? "participante" : "";
+  const timeBonus = isGroup ? `+${state.session.groupExtra}s` : `+${settings.individualExtra}s`;
+
   elements.sessionModeBadge.textContent = isGroup
-    ? `Grupo ${state.session.roomCode || ""}${roleLabel ? ` - ${roleLabel}` : ""}`
-    : "Individual";
+    ? `Grupo ${state.session.roomCode || ""}${roleLabel ? ` - ${roleLabel}` : ""} - ${timeBonus}`
+    : `Individual ${timeBonus}`;
   elements.sessionCategoryBadge.textContent = category.shortLabel;
   elements.sessionHintBadge.textContent = state.session.hintsEnabled ? "Dicas ON" : "Torneio: dicas OFF";
   elements.sessionHintBadge.classList.toggle("is-locked", !state.session.hintsEnabled);
@@ -691,9 +952,9 @@ function renderSessionStrip() {
 function updateScoreboard() {
   const history = getHistory();
   const rows = [
-    { label: "Voce", score: state.score, meta: `${state.correct} acertos agora` },
-    { label: "Sequencia", score: state.bestStreak * 30, meta: `${state.bestStreak} seguidas` },
-    { label: "Precisao", score: getAccuracy(), meta: `${getAccuracy()}% corretas`, suffix: "%" },
+    { label: "Você", score: state.score, meta: `${state.correct} acertos agora` },
+    { label: "Sequência", score: state.bestStreak * 30, meta: `${state.bestStreak} seguidas` },
+    { label: "Precisão", score: getAccuracy(), meta: `${getAccuracy()}% corretas`, suffix: "%" },
   ];
 
   if (history[0]) {
@@ -728,9 +989,9 @@ function updateStats() {
   const levelRange = level.next - level.previous;
   const levelProgress = Math.min(100, Math.round(((state.score - level.previous) / levelRange) * 100));
   elements.levelMeter.style.width = `${levelProgress}%`;
-  elements.levelLabel.textContent = `Nivel ${level.level}`;
+  elements.levelLabel.textContent = `Nível ${level.level}`;
   elements.nextLevelLabel.textContent =
-    level.level === 5 ? "Nivel maximo da rodada" : `${level.next - state.score} XP para o proximo nivel`;
+    level.level === 5 ? "Nível máximo da rodada" : `${level.next - state.score} XP para o próximo nível`;
 
   updateScoreboard();
 }
@@ -774,10 +1035,13 @@ function renderQuestion() {
   const answer = getAnswer(question);
   const difficulty = DIFFICULTY[question.difficulty];
   const remaining = state.remainingById.get(question.id) ?? question.timeLimit;
+  const timeBonus = question.timeLimit - question.baseTimeLimit;
+  const timeLabel = timeBonus > 0 ? `${question.timeLimit}s (+${timeBonus}s)` : `${question.timeLimit}s`;
 
   elements.questionLabel.textContent = `${String(state.currentIndex + 1).padStart(2, "0")} Pergunta`;
   elements.questionCount.textContent = `${state.currentIndex + 1} de ${questions.length}`;
-  elements.difficultyChip.textContent = `${difficulty.label} - ${question.timeLimit}s`;
+  elements.difficultyChip.textContent = `${difficulty.label} - ${timeLabel}${question.multiplier > 1 ? " - 2X" : ""}`;
+  elements.difficultyChip.classList.toggle("is-double", question.multiplier > 1);
   elements.questionText.textContent = question.question;
   elements.timer.textContent = formatTime(remaining);
   elements.timerBadge.classList.toggle("is-hot", !answer && remaining <= 5);
@@ -794,7 +1058,7 @@ function renderQuestion() {
       if (isWrong) classes.push("is-wrong");
       return `
         <button class="${classes.join(" ")}" type="button" data-answer="${index}" ${answer ? "disabled" : ""}>
-          <span class="answer-letter">${String.fromCharCode(65 + index)}</span>
+          <span class="answer-letter">${getAnswerLetter(index)}</span>
           <span class="answer-text">${option}</span>
         </button>
       `;
@@ -802,13 +1066,16 @@ function renderQuestion() {
     .join("");
 
   elements.explanation.hidden = !answer;
-  elements.explanation.textContent = answer
-    ? answer.timeout
-      ? `Tempo esgotado. ${question.explanation}`
-      : question.explanation
-    : "";
+  if (answer) {
+    const correctPrefix = answer.correct ? `+${answer.xp} XP. ` : `Resposta certa: ${getAnswerLetter(question.answerIndex)}. `;
+    const multiplierPrefix = answer.correct && question.multiplier > 1 ? `${question.multiplierReason} ` : "";
+    const timeoutPrefix = answer.timeout ? "Tempo esgotado. " : "";
+    elements.explanation.textContent = `${timeoutPrefix}${correctPrefix}${multiplierPrefix}${question.explanation}`;
+  } else {
+    elements.explanation.textContent = "";
+  }
 
-  elements.nextButtonText.textContent = state.currentIndex === questions.length - 1 ? "Finalizar" : "Proxima";
+  elements.nextButtonText.textContent = state.currentIndex === questions.length - 1 ? "Finalizar" : "Próxima";
   $$('[data-action="previous"]').forEach((button) => {
     button.disabled = state.currentIndex === 0;
   });
@@ -821,6 +1088,7 @@ function renderQuestion() {
 function startTimer() {
   stopTimer();
   const question = getCurrentQuestion();
+  state.lastTickSecond = null;
   if (state.phase !== "quiz" || getAnswer(question) || state.finished) return;
 
   state.timerId = window.setInterval(() => {
@@ -829,6 +1097,12 @@ function startTimer() {
     state.remainingById.set(current.id, remaining);
     elements.timer.textContent = formatTime(remaining);
     elements.timerBadge.classList.toggle("is-hot", remaining <= 5);
+
+    if (remaining > 0 && remaining <= 5 && state.lastTickSecond !== remaining) {
+      state.lastTickSecond = remaining;
+      playSound("tick");
+    }
+
     if (remaining <= 0) {
       markTimeout(current);
     }
@@ -856,8 +1130,11 @@ function chooseAnswer(selectedIndex) {
     state.correct += 1;
     xp = calculateXp(question, remaining, state.streak);
     state.score += xp;
+    playSound("correct");
+    if (question.multiplier > 1) window.setTimeout(() => playSound("bonus"), 160);
   } else {
     state.streak = 0;
+    playSound("wrong");
   }
 
   state.answered.set(question.id, {
@@ -866,6 +1143,7 @@ function chooseAnswer(selectedIndex) {
     xp,
     timeout: false,
     remaining,
+    multiplier: question.multiplier,
   });
 
   stopTimer();
@@ -883,7 +1161,9 @@ function markTimeout(question) {
     xp: 0,
     timeout: true,
     remaining: 0,
+    multiplier: question.multiplier,
   });
+  playSound("timeout");
   renderQuestion();
 }
 
@@ -904,13 +1184,24 @@ function goPrevious() {
 }
 
 function finishQuiz() {
+  const shouldSave = state.phase === "quiz" && !state.finished;
   state.finished = true;
   stopTimer();
-  saveHistory();
+  if (shouldSave) saveHistory();
+  showResults();
+}
+
+function finishNow() {
+  closeSettings(false);
+  if (state.phase === "quiz") {
+    finishQuiz();
+    return;
+  }
   showResults();
 }
 
 function showResults() {
+  closeSettings(false);
   if (state.phase === "quiz" && !state.finished) {
     stopTimer();
   }
@@ -926,10 +1217,10 @@ function showResults() {
     state.phase !== "quiz"
       ? "Suas melhores rodadas ficam salvas neste navegador."
       : state.score >= 1800
-        ? "Partida monstruosa: voce dominou regras, fundamentos e leitura de jogo."
+        ? "Partida absurda: você dominou regras, fundamentos e leitura de jogo."
         : state.score >= 1000
-          ? "Boa rodada! Voce mostrou jogo coletivo e boa mao no quiz."
-          : "Aquecimento feito. Revise as explicacoes e volte para cravar mais cestas.";
+          ? "Boa rodada! Você mostrou visão de quadra e mão quente no quiz."
+          : "Aquecimento feito. Revise as explicações e volte para cravar mais respostas.";
 
   const history = getHistory();
   elements.historyList.innerHTML = history.length
@@ -944,22 +1235,25 @@ function showResults() {
           `,
         )
         .join("")
-    : "<li><span>Sem historico</span><strong>Jogue uma rodada</strong></li>";
+    : "<li><span>Sem histórico</span><strong>Jogue uma rodada</strong></li>";
 
   if (!elements.resultModal.open) {
     elements.resultModal.showModal();
   }
 }
 
-function closeResults() {
+function closeResults(shouldResume = true) {
   if (elements.resultModal.open) elements.resultModal.close();
-  if (state.phase === "quiz" && !state.finished) {
+  if (shouldResume && state.phase === "quiz" && !state.finished) {
     startTimer();
   }
 }
 
 function restartQuiz() {
   stopTimer();
+  closeSettings(false);
+  closeSetupDialogs();
+  closeResults(false);
   if (state.phase !== "quiz") {
     startQuiz({
       mode: "individual",
@@ -975,7 +1269,8 @@ function restartQuiz() {
 
 function backToStart() {
   stopTimer();
-  closeResults();
+  closeSettings(false);
+  closeResults(false);
   closeSetupDialogs();
   state.phase = "setup";
   showScreen("start");
@@ -1033,6 +1328,9 @@ function saveHistory() {
 function handleAction(action, target) {
   if (action === "open-mode") openModeModal();
   if (action === "close-setup-dialog") closeSetupDialogs();
+  if (action === "open-settings") openSettings();
+  if (action === "close-settings") closeSettings();
+  if (action === "finish-now") finishNow();
   if (action === "choose-mode") {
     if (target.dataset.mode === "group") showRoomScreen();
     if (target.dataset.mode === "individual") openCategoryModal();
@@ -1064,12 +1362,19 @@ function handleAction(action, target) {
 
 document.addEventListener("click", (event) => {
   const answerTarget = event.target.closest("[data-answer]");
+  const actionTarget = event.target.closest("[data-action]");
+  const interactiveTarget = answerTarget || actionTarget;
+
+  if (interactiveTarget && !interactiveTarget.disabled) {
+    unlockAudioFromGesture();
+    playSound("click");
+  }
+
   if (answerTarget) {
     chooseAnswer(Number(answerTarget.dataset.answer));
     return;
   }
 
-  const actionTarget = event.target.closest("[data-action]");
   if (!actionTarget) return;
   handleAction(actionTarget.dataset.action, actionTarget);
 });
@@ -1078,10 +1383,52 @@ elements.joinRoomCode.addEventListener("input", () => {
   elements.joinRoomCode.value = normalizeRoomCode(elements.joinRoomCode.value);
 });
 
-elements.resultModal.addEventListener("cancel", closeResults);
+elements.volumeControl.addEventListener("input", () => {
+  settings.volume = clampNumber(Number(elements.volumeControl.value) / 100, 0, 1, DEFAULT_SETTINGS.volume);
+  elements.volumeValue.textContent = `${Math.round(settings.volume * 100)}%`;
+  saveSettings();
+  applyAudioVolume();
+});
+
+elements.musicToggle.addEventListener("change", () => {
+  unlockAudioFromGesture();
+  settings.musicEnabled = elements.musicToggle.checked;
+  saveSettings();
+  syncMusic();
+  playSound(settings.musicEnabled ? "correct" : "click");
+});
+
+elements.individualExtraControl.addEventListener("input", () => {
+  settings.individualExtra = clampNumber(elements.individualExtraControl.value, 0, 20, DEFAULT_SETTINGS.individualExtra);
+  elements.individualExtraValue.textContent = `+${settings.individualExtra}s`;
+  saveSettings();
+  renderSessionStrip();
+});
+
+elements.groupExtraControl.addEventListener("input", () => {
+  if (elements.groupExtraControl.disabled) return;
+  settings.groupExtra = clampNumber(elements.groupExtraControl.value, 10, 20, DEFAULT_SETTINGS.groupExtra);
+  elements.groupExtraValue.textContent = `+${settings.groupExtra}s`;
+  if (state.phase === "quiz" && state.session.mode === "group" && state.session.roomRole === "host") {
+    state.session.groupExtra = settings.groupExtra;
+  }
+  if (setupState.pendingRoom) {
+    setupState.pendingRoom.groupExtra = settings.groupExtra;
+    saveRoom(setupState.pendingRoom);
+    elements.roomCreatedMeta.textContent = `${CATEGORIES[setupState.pendingRoom.category].label} - ${
+      setupState.pendingRoom.playStyle === "tournament" ? "modo torneio" : "modo casual"
+    } - +${setupState.pendingRoom.groupExtra}s em grupo`;
+  }
+  saveSettings();
+  renderSessionStrip();
+});
+
+elements.resultModal.addEventListener("cancel", () => closeResults());
 elements.modeModal.addEventListener("cancel", closeSetupDialogs);
 elements.categoryModal.addEventListener("cancel", closeSetupDialogs);
+elements.settingsModal.addEventListener("cancel", () => closeSettings());
 
 renderCategoryControls();
+renderSettings();
 updateStats();
 showScreen("start");

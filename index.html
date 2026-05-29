@@ -19,19 +19,20 @@
             <span>Basquete</span>
             <strong>Quiz</strong>
           </div>
-          <p class="start-tagline">Acerte no estouro do relogio, escolha seu assunto e jogue no estilo HQ.</p>
+          <p class="start-tagline">Escolha um tema, responda sob pressão e prove que você entende o jogo dentro e fora da quadra.</p>
           <div class="start-actions">
-            <button class="start-button" type="button" data-action="open-mode">Comecar</button>
+            <button class="start-button" type="button" data-action="open-mode">Começar</button>
             <button class="start-button secondary" type="button" data-action="show-start-ranking">Ranking local</button>
+            <button class="start-button settings-button" type="button" data-action="open-settings">Configurações</button>
           </div>
         </div>
 
         <aside class="warmup-card" aria-label="Resumo do jogo">
           <img src="assets/basket-stickers.png" alt="" />
           <div>
-            <span class="warmup-label">Pre-jogo</span>
-            <h1>Quiz de basquete com tempo por dificuldade.</h1>
-            <p>Individual ou grupo local, categorias por conteudo, dicas reais no modo casual e placar salvo no navegador.</p>
+            <span class="warmup-label">Pré-jogo</span>
+            <h1>Entre em quadra e marque pontos no conhecimento.</h1>
+            <p>Cada rodada mistura tempo, sequência, multiplicadores e decisões rápidas para transformar regras e fundamentos em desafio de verdade.</p>
           </div>
         </aside>
       </div>
@@ -47,20 +48,20 @@
           </button>
           <div>
             <span class="warmup-label">Modo grupo</span>
-            <h1>Sala por codigo</h1>
+            <h1>Sala por código</h1>
           </div>
         </header>
 
         <div class="room-layout">
           <section class="room-panel">
             <div class="room-tabs" role="tablist" aria-label="Tipo de sala">
-              <button class="room-tab is-active" type="button" data-action="switch-room-tab" data-room-tab="create">Criar room</button>
+              <button class="room-tab is-active" type="button" data-action="switch-room-tab" data-room-tab="create">Criar sala</button>
               <button class="room-tab" type="button" data-action="switch-room-tab" data-room-tab="join">Entrar</button>
             </div>
 
             <div class="room-tab-panel" id="createRoomPanel">
               <h2>Configure a partida</h2>
-              <p class="setup-copy">Escolha o conteudo, defina o clima da sala e gere o codigo para o grupo.</p>
+              <p class="setup-copy">Escolha o conteúdo, defina o clima da sala e gere o código para o grupo.</p>
               <div class="category-grid compact" id="roomCategoryGrid"></div>
 
               <div class="mode-switch" aria-label="Modo da sala">
@@ -75,23 +76,23 @@
               </div>
 
               <div class="room-code-box" id="roomCodeBox" hidden>
-                <span>Codigo da sala</span>
+                <span>Código da sala</span>
                 <strong id="roomCodeLabel">BQ-0000</strong>
                 <p id="roomCreatedMeta">Sala pronta.</p>
               </div>
 
               <div class="room-actions">
-                <button class="nav-button ghost dark" type="button" data-action="create-room">Gerar codigo</button>
+                <button class="nav-button ghost dark" type="button" data-action="create-room">Gerar código</button>
                 <button class="nav-button next" type="button" data-action="start-room" id="startRoomButton" disabled>Iniciar</button>
               </div>
             </div>
 
             <div class="room-tab-panel is-hidden" id="joinRoomPanel">
-              <h2>Entrar em uma room</h2>
-              <p class="setup-copy">Digite o codigo do criador nesta mesma instalacao do site e toque em pronto.</p>
-              <label class="room-input-label" for="joinRoomCode">Codigo da room</label>
+              <h2>Entrar em uma sala</h2>
+              <p class="setup-copy">Digite o código do criador nesta mesma instalação do site e toque em pronto.</p>
+              <label class="room-input-label" for="joinRoomCode">Código da sala</label>
               <input class="room-input" id="joinRoomCode" type="text" inputmode="text" placeholder="BQ-7K2D" autocomplete="off" />
-              <p class="join-feedback" id="joinFeedback">Aguardando codigo.</p>
+              <p class="join-feedback" id="joinFeedback">Aguardando código.</p>
               <button class="nav-button next full" type="button" data-action="join-room">Pronto</button>
             </div>
           </section>
@@ -99,9 +100,9 @@
           <aside class="room-panel room-notes">
             <h2>Como funciona</h2>
             <ul>
-              <li>Casual libera dicas uteis por pergunta.</li>
+              <li>Casual libera dicas úteis por pergunta.</li>
               <li>Torneio bloqueia dicas e deixa o placar mais limpo.</li>
-              <li>A room usa codigo local para preparar a rodada sem backend.</li>
+              <li>A sala usa código local para preparar a rodada sem backend.</li>
             </ul>
           </aside>
         </div>
@@ -124,8 +125,8 @@
             <span id="levelMeter"></span>
           </div>
           <div class="level-row">
-            <span id="levelLabel">Nivel 1</span>
-            <span id="nextLevelLabel">120 XP para o proximo nivel</span>
+            <span id="levelLabel">Nível 1</span>
+            <span id="nextLevelLabel">120 XP para o próximo nível</span>
           </div>
         </section>
 
@@ -140,13 +141,20 @@
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="m14.5 5-7 7 7 7" />
             </svg>
-            Inicio
+            Início
           </button>
           <button class="menu-item" type="button" data-action="show-results">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M7 4h10v3h3v4c0 2.6-1.7 4.8-4.1 5.5A5.1 5.1 0 0 1 13 18.8V21h3v2H8v-2h3v-2.2a5.1 5.1 0 0 1-2.9-2.3A5.9 5.9 0 0 1 4 11V7h3zm10 5v4.9c.8-.6 1.3-1.6 1.3-2.9V9zM5.7 9v2c0 1.3.5 2.3 1.3 2.9V9z" />
             </svg>
-            Pontuacao
+            Pontuação
+          </button>
+          <button class="menu-item" type="button" data-action="open-settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 15.4a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8z" />
+              <path d="m19.4 15 .7 1.5-2.1 2.1-1.5-.7a8 8 0 0 1-1.5.6L14.4 21h-4.8L9 18.5a8 8 0 0 1-1.5-.6l-1.5.7-2.1-2.1.7-1.5a8 8 0 0 1-.6-1.5L1.5 12l2.5-1.5a8 8 0 0 1 .6-1.5l-.7-1.5L6 5.4l1.5.7A8 8 0 0 1 9 5.5L9.6 3h4.8l.6 2.5a8 8 0 0 1 1.5.6l1.5-.7 2.1 2.1-.7 1.5c.3.5.5 1 .6 1.5L22.5 12l-2.5 1.5c-.1.5-.3 1-.6 1.5z" />
+            </svg>
+            Configurações
           </button>
           <button class="menu-item" type="button" data-action="restart">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -199,7 +207,7 @@
             <strong id="mobileStreak">0</strong>
           </div>
           <div>
-            <span>Precisao</span>
+            <span>Precisão</span>
             <strong id="mobileAccuracy">0%</strong>
           </div>
         </div>
@@ -213,7 +221,7 @@
 
         <div class="question-stage">
           <div>
-            <span class="difficulty-chip" id="difficultyChip">Facil</span>
+            <span class="difficulty-chip" id="difficultyChip">Fácil</span>
             <h2 id="questionText">Carregando pergunta...</h2>
             <p id="hintText" class="hint-text" hidden></p>
           </div>
@@ -238,13 +246,13 @@
             Anterior
           </button>
 
-          <div class="streak-badge" aria-label="Sequencia atual">
+          <div class="streak-badge" aria-label="Sequência atual">
             <span class="streak-star" aria-hidden="true"></span>
             <strong id="streakBadge">0</strong>
           </div>
 
           <button class="nav-button next" type="button" data-action="next">
-            <span id="nextButtonText">Proxima</span>
+            <span id="nextButtonText">Próxima</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="m9.5 5 7 7-7 7" />
             </svg>
@@ -252,14 +260,14 @@
         </footer>
       </section>
 
-      <aside class="score-rail" aria-label="Pontuacao">
+      <aside class="score-rail" aria-label="Pontuação">
         <section class="scoreboard">
-          <h2>Pontuacao</h2>
+          <h2>Pontuação</h2>
           <ol id="scoreList" class="score-list"></ol>
         </section>
 
         <section class="stat-card streak-card">
-          <span class="card-label">Sequencia</span>
+          <span class="card-label">Sequência</span>
           <div class="big-stat">
             <span class="flame" aria-hidden="true"></span>
             <strong id="currentStreak">0</strong>
@@ -268,7 +276,7 @@
         </section>
 
         <section class="stat-card">
-          <span class="card-label">Precisao</span>
+          <span class="card-label">Precisão</span>
           <div class="big-stat">
             <span class="target-icon" aria-hidden="true"></span>
             <strong id="accuracy">0%</strong>
@@ -292,11 +300,11 @@
       <div class="mode-grid">
         <button class="mode-card" type="button" data-action="choose-mode" data-mode="individual">
           <strong>Individual</strong>
-          <span>Voce contra o relogio, com categoria escolhida antes da primeira pergunta.</span>
+          <span>Você contra o relógio, com categoria escolhida antes da primeira pergunta.</span>
         </button>
         <button class="mode-card" type="button" data-action="choose-mode" data-mode="group">
           <strong>Em grupo</strong>
-          <span>Crie uma room local por codigo ou entre no codigo de quem criou.</span>
+          <span>Crie uma sala local por código ou entre no código de quem criou.</span>
         </button>
       </div>
     </dialog>
@@ -307,13 +315,67 @@
           <path d="m6 6 12 12M18 6 6 18" />
         </svg>
       </button>
-      <span class="warmup-label">Conteudo</span>
-      <h2 id="categoryTitle">Qual tipo de quiz voce quer?</h2>
+      <span class="warmup-label">Conteúdo</span>
+      <h2 id="categoryTitle">Qual tipo de quiz você quer?</h2>
       <p class="setup-copy">Cada categoria usa perguntas do mesmo banco, mantendo tempo por dificuldade.</p>
       <div class="category-grid" id="categoryGrid"></div>
       <div class="modal-actions">
         <button class="nav-button ghost dark" type="button" data-action="open-mode">Voltar</button>
-        <button class="nav-button next" type="button" data-action="start-individual">Comecar quiz</button>
+        <button class="nav-button next" type="button" data-action="start-individual">Começar quiz</button>
+      </div>
+    </dialog>
+
+    <dialog class="setup-modal settings-modal" id="settingsModal" aria-labelledby="settingsTitle">
+      <button class="modal-close" type="button" data-action="close-settings" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <span class="warmup-label">Configurações</span>
+      <h2 id="settingsTitle">Ajuste a partida</h2>
+      <p class="setup-copy">Controle som, música e tempo extra para deixar a rodada no ritmo certo.</p>
+
+      <div class="settings-grid">
+        <label class="setting-row" for="volumeControl">
+          <span>
+            <strong>Volume</strong>
+            <small>Efeitos, alertas e música de fundo.</small>
+          </span>
+          <input id="volumeControl" type="range" min="0" max="100" step="5" value="70" />
+          <output id="volumeValue" for="volumeControl">70%</output>
+        </label>
+
+        <label class="setting-row toggle-row" for="musicToggle">
+          <span>
+            <strong>Música de fundo</strong>
+            <small>Uma batida leve para acompanhar a partida.</small>
+          </span>
+          <input id="musicToggle" type="checkbox" />
+        </label>
+
+        <label class="setting-row" for="individualExtraControl">
+          <span>
+            <strong>Tempo extra individual</strong>
+            <small>Aplicado ao iniciar ou reiniciar uma partida solo.</small>
+          </span>
+          <input id="individualExtraControl" type="range" min="0" max="20" step="5" value="0" />
+          <output id="individualExtraValue" for="individualExtraControl">+0s</output>
+        </label>
+
+        <label class="setting-row" id="groupExtraField" for="groupExtraControl">
+          <span>
+            <strong>Tempo extra em grupo</strong>
+            <small id="groupExtraNote">Quem cria a sala define o bônus de tempo do grupo.</small>
+          </span>
+          <input id="groupExtraControl" type="range" min="10" max="20" step="5" value="15" />
+          <output id="groupExtraValue" for="groupExtraControl">+15s</output>
+        </label>
+      </div>
+
+      <div class="modal-actions settings-actions">
+        <button class="nav-button ghost dark" type="button" data-action="back-start">Voltar ao início</button>
+        <button class="nav-button ghost dark" type="button" data-action="restart">Reiniciar partida</button>
+        <button class="nav-button next" type="button" data-action="finish-now">Finalizar partida</button>
       </div>
     </dialog>
 
@@ -331,18 +393,18 @@
           <strong id="finalCorrect">0/30</strong>
         </div>
         <div>
-          <span>Precisao</span>
+          <span>Precisão</span>
           <strong id="finalAccuracy">0%</strong>
         </div>
         <div>
-          <span>Maior sequencia</span>
+          <span>Maior sequência</span>
           <strong id="finalBestStreak">0</strong>
         </div>
       </div>
       <ol id="historyList" class="history-list"></ol>
       <div class="modal-actions">
         <button class="nav-button ghost dark" type="button" data-action="close-results">Voltar</button>
-        <button class="nav-button ghost dark" type="button" data-action="back-start">Inicio</button>
+        <button class="nav-button ghost dark" type="button" data-action="back-start">Início</button>
         <button class="nav-button next" type="button" data-action="restart">Jogar de novo</button>
       </div>
     </dialog>

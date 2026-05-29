@@ -168,6 +168,11 @@ button:active:not(:disabled) {
   background: linear-gradient(135deg, #5d4dbb, #8a77ec);
 }
 
+.start-button.settings-button {
+  color: var(--purple-ink);
+  background: linear-gradient(180deg, #ffffff, #eaf2ff);
+}
+
 .start-button:hover,
 .mode-card:hover,
 .category-card:hover,
@@ -311,6 +316,117 @@ button:active:not(:disabled) {
   color: #443f62;
   font-weight: 850;
   line-height: 1.35;
+}
+
+.settings-modal {
+  width: min(760px, calc(100vw - 28px));
+}
+
+.settings-grid {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 26px;
+}
+
+.setting-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 86px;
+  padding: 16px;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 6px 7px 0 rgba(20, 19, 27, 0.13);
+}
+
+.setting-row span {
+  display: grid;
+  gap: 5px;
+}
+
+.setting-row strong {
+  color: var(--purple-ink);
+  font-size: 1.08rem;
+  font-weight: 950;
+}
+
+.setting-row small {
+  color: #5e5874;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.setting-row input[type="range"] {
+  width: 100%;
+  accent-color: var(--yellow-deep);
+  cursor: pointer;
+}
+
+.setting-row output {
+  min-width: 58px;
+  justify-self: end;
+  padding: 7px 10px;
+  color: var(--ink);
+  text-align: center;
+  background: #fff3a8;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  font-weight: 950;
+}
+
+.toggle-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.toggle-row input[type="checkbox"] {
+  position: relative;
+  width: 74px;
+  height: 40px;
+  appearance: none;
+  background: #dfe5f5;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.toggle-row input[type="checkbox"]::before {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.18s var(--ease-snap), background 0.18s ease;
+}
+
+.toggle-row input[type="checkbox"]:checked {
+  background: var(--yellow);
+}
+
+.toggle-row input[type="checkbox"]:checked::before {
+  background: var(--purple-soft);
+  transform: translate(33px, -50%);
+}
+
+.setting-row.is-disabled {
+  opacity: 0.62;
+}
+
+.settings-actions {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.settings-actions .nav-button {
+  flex: 1 1 180px;
+  min-width: 0;
 }
 
 .modal-close {
@@ -1030,6 +1146,14 @@ button:active:not(:disabled) {
   text-transform: uppercase;
   box-shadow: 4px 5px 0 rgba(20, 19, 27, 0.14);
   animation: chipPop 0.28s var(--ease-snap) both;
+}
+
+.difficulty-chip.is-double {
+  color: var(--ink);
+  background:
+    repeating-linear-gradient(135deg, rgba(20, 19, 27, 0.12) 0 8px, transparent 8px 16px),
+    linear-gradient(180deg, #fff2a0, var(--yellow));
+  box-shadow: 5px 6px 0 rgba(20, 19, 27, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.18);
 }
 
 .quiz-board h2 {
@@ -1929,6 +2053,27 @@ button:active:not(:disabled) {
     padding: 26px 18px 20px;
     border-width: 3px;
     overflow: auto;
+  }
+
+  .settings-grid {
+    gap: 11px;
+    margin: 18px 0 22px;
+  }
+
+  .setting-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    min-height: 0;
+    padding: 14px;
+    border-width: 3px;
+  }
+
+  .toggle-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .setting-row output {
+    justify-self: start;
   }
 
   .mode-grid,
